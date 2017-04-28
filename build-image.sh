@@ -9,7 +9,7 @@ docker build -t pp-dashboard-builder -f build/Dockerfile.build .
 
 # Build the pp-dashboard.tar.gz package
 docker run --rm \
-  -v "$PWD":/go/src/github.com/ottonello/component-status-dashboard \
+  -v "$PWD":/go/src/github.com/ottonello/component-dashboard \
   pp-dashboard-builder
 
 # Build the final image

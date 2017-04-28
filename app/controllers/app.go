@@ -13,12 +13,12 @@ type App struct {
 }
 
 func (c App) Index() revel.Result {
-	return c.Render()
+	return c.Redirect("/pingAll")
 }
 
 func (c App) PingAll() revel.Result {
 	url := os.Getenv("COMPONENT_STATUS_URL")
-	if (url == nil) {
+	if url == "" {
 		url = "http://dummy/pingAll"
 	}
 
