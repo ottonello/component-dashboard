@@ -1,0 +1,8 @@
+FROM golang:1.8.0
+
+WORKDIR /go/src/github.com/ottonello/component-dashboard
+
+RUN curl https://glide.sh/get | sh
+RUN go get -v github.com/revel/cmd/revel
+
+CMD sh build/build_cmd.sh
